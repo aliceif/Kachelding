@@ -1,0 +1,112 @@
+﻿<Window x:Class="Kachelding.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:Kachelding"
+		mc:Ignorable="d"
+		d:DataContext="{d:DesignInstance Type=local:MainWindow}"
+		Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:PixelsizeToRectConverter x:Key="PixelsizeToRectConverter"/>
+        <local:LetterToColorConverter x:Key="LetterToColorConverter"/>
+    </Window.Resources>
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Rectangle Grid.Row="0" Grid.RowSpan="1" Grid.Column="0">
+			<Rectangle.Fill>
+				<DrawingBrush TileMode="Tile" ViewportUnits="Absolute" Stretch="Uniform" Viewport="{Binding PixelSize, Converter={StaticResource PixelsizeToRectConverter}}">
+					<DrawingBrush.Drawing>
+						<DrawingGroup>
+							<GeometryDrawing Brush="{Binding Cell00, Converter={StaticResource LetterToColorConverter}}">
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="0,0,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing Brush="{Binding Cell01, Converter={StaticResource LetterToColorConverter}}">
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="0,10,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing Brush="{Binding Cell02, Converter={StaticResource LetterToColorConverter}}">
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="10,0,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing Brush="{Binding Cell03, Converter={StaticResource LetterToColorConverter}}">
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="10,10,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+						</DrawingGroup>
+					</DrawingBrush.Drawing>
+				</DrawingBrush>
+			</Rectangle.Fill>
+		</Rectangle>		
+		<StackPanel Grid.Column="1" Orientation="Vertical">
+			<DockPanel>
+				<TextBlock Text="PixelSize"/>
+				<TextBox Text="{Binding PixelSize}"/>
+			</DockPanel>
+			<Grid HorizontalAlignment="Right" VerticalAlignment="Top">
+				<Grid.Resources>
+					<Style TargetType="{x:Type TextBox}">
+						<Setter Property="Width" Value="50"/>
+						<Setter Property="Height" Value="50"/>
+						<Setter Property="FontSize" Value="25"/>
+					</Style>
+				</Grid.Resources>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<TextBox Grid.Row="0" Grid.Column="0" Text="{Binding Cell00}" />
+				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Cell01}" />
+				<TextBox Grid.Row="1" Grid.Column="0" Text="{Binding Cell02}" />
+				<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Cell03}" />
+			</Grid>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="auto"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+				<TextBlock Grid.Column="0" Grid.Row="0">A</TextBlock>
+				<TextBlock Grid.Column="0" Grid.Row="1">B</TextBlock>
+				<TextBlock Grid.Column="0" Grid.Row="2">C</TextBlock>
+				<TextBlock Grid.Column="0" Grid.Row="3">D</TextBlock>
+				<TextBox Grid.Column="1" Grid.Row="0" Text="{Binding ColorA}"/>
+				<TextBox Grid.Column="1" Grid.Row="1" Text="{Binding ColorB}"/>
+				<TextBox Grid.Column="1" Grid.Row="2" Text="{Binding ColorC}"/>
+				<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding ColorD}"/>
+			</Grid>
+		</StackPanel>
+	</Grid>
+</Window>
