@@ -20,10 +20,10 @@ namespace Kachelding
 
 			return values[0] switch
 			{
-				"A" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[1])),
-				"B" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[2])),
-				"C" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[3])),
-				"D" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[4])),
+				"A" or "a" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[1])),
+				"B" or "b" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[2])),
+				"C" or "c" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[3])),
+				"D" or "d" => new SolidColorBrush((Color)ColorConverter.ConvertFromString((string)values[4])),
 				_ => Brushes.Black,
 			};
 		}

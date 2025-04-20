@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,6 +45,7 @@ namespace Kachelding
 			this.ColorD = "Blue";
 		}
 
+		public String CustomTitle { get => $"Kachelding {Assembly.GetExecutingAssembly().GetName().Version}"; }
 
 		private int _pixelSize;
 
