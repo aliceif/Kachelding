@@ -77,7 +77,7 @@
 								</GeometryDrawing.Brush>
 								<GeometryDrawing.Geometry>
 									<GeometryGroup>
-										<RectangleGeometry Rect="0,10,10,10"/>
+										<RectangleGeometry Rect="20,0,10,10"/>
 									</GeometryGroup>
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
@@ -96,7 +96,235 @@
 								</GeometryDrawing.Brush>
 								<GeometryDrawing.Geometry>
 									<GeometryGroup>
+										<RectangleGeometry Rect="30,0,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell10"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="0,10,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell11"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
 										<RectangleGeometry Rect="10,10,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell12"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="20,10,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell13"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="30,10,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell20"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="0,20,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell21"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="10,20,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell22"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="20,20,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell23"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="30,20,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell30"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="0,30,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell31"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="10,30,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell32"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="20,30,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell33"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="30,30,10,10"/>
 									</GeometryGroup>
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
@@ -132,8 +360,20 @@
 				</Grid.ColumnDefinitions>
 				<TextBox Grid.Row="0" Grid.Column="0" Text="{Binding Cell00}" />
 				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Cell01}" />
-				<TextBox Grid.Row="1" Grid.Column="0" Text="{Binding Cell02}" />
-				<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Cell03}" />
+				<TextBox Grid.Row="0" Grid.Column="2" Text="{Binding Cell02}" />
+				<TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Cell03}" />
+				<TextBox Grid.Row="1" Grid.Column="0" Text="{Binding Cell10}" />
+				<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Cell11}" />
+				<TextBox Grid.Row="1" Grid.Column="2" Text="{Binding Cell12}" />
+				<TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Cell13}" />
+				<TextBox Grid.Row="2" Grid.Column="0" Text="{Binding Cell20}" />
+				<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Cell21}" />
+				<TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Cell22}" />
+				<TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Cell23}" />
+				<TextBox Grid.Row="3" Grid.Column="0" Text="{Binding Cell30}" />
+				<TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Cell31}" />
+				<TextBox Grid.Row="3" Grid.Column="2" Text="{Binding Cell32}" />
+				<TextBox Grid.Row="3" Grid.Column="3" Text="{Binding Cell33}" />
 			</Grid>
 			<Grid>
 				<Grid.ColumnDefinitions>

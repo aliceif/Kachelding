@@ -21,11 +21,23 @@ namespace Kachelding
 		{
 			InitializeComponent();
 			this.DataContext = this;
-			this.PixelSize = 16;
+			this.PixelSize = 100;
 			this.Cell00 = "A";
 			this.Cell01 = "B";
 			this.Cell02 = "C";
 			this.Cell03 = "D";
+			this.Cell10 = "B";
+			this.Cell11 = "A";
+			this.Cell12 = "D";
+			this.Cell13 = "C";
+			this.Cell20 = "A";
+			this.Cell21 = "B";
+			this.Cell22 = "D";
+			this.Cell23 = "C";
+			this.Cell30 = "B";
+			this.Cell31 = "A";
+			this.Cell32 = "C";
+			this.Cell33 = "D";
 			this.ColorA = "Black";
 			this.ColorB = "Red";
 			this.ColorC = "Green";
@@ -105,6 +117,186 @@ namespace Kachelding
 				{
 					_cell03 = value;
 					OnPropertyChanged(nameof(Cell03));
+				}
+			}
+		}
+
+		private string _cell10;
+
+		public string Cell10
+		{
+			get { return _cell10; }
+			set
+			{
+				if (_cell10 != value)
+				{
+					_cell10 = value;
+					OnPropertyChanged(nameof(Cell10));
+				}
+			}
+		}
+
+		private string _cell11;
+
+		public string Cell11
+		{
+			get { return _cell11; }
+			set
+			{
+				if (_cell11 != value)
+				{
+					_cell11 = value;
+					OnPropertyChanged(nameof(Cell11));
+				}
+			}
+		}
+
+		private string _cell12;
+
+		public string Cell12
+		{
+			get { return _cell12; }
+			set
+			{
+				if (_cell12 != value)
+				{
+					_cell12 = value;
+					OnPropertyChanged(nameof(Cell12));
+				}
+			}
+		}
+
+		private string _cell13;
+
+		public string Cell13
+		{
+			get { return _cell13; }
+			set
+			{
+				if (_cell13 != value)
+				{
+					_cell13 = value;
+					OnPropertyChanged(nameof(Cell13));
+				}
+			}
+		}
+
+		private string _cell20;
+
+		public string Cell20
+		{
+			get { return _cell20; }
+			set
+			{
+				if (_cell20 != value)
+				{
+					_cell20 = value;
+					OnPropertyChanged(nameof(Cell20));
+				}
+			}
+		}
+
+		private string _cell21;
+
+		public string Cell21
+		{
+			get { return _cell21; }
+			set
+			{
+				if (_cell21 != value)
+				{
+					_cell21 = value;
+					OnPropertyChanged(nameof(Cell21));
+				}
+			}
+		}
+
+		private string _cell22;
+
+		public string Cell22
+		{
+			get { return _cell22; }
+			set
+			{
+				if (_cell22 != value)
+				{
+					_cell22 = value;
+					OnPropertyChanged(nameof(Cell22));
+				}
+			}
+		}
+
+		private string _cell23;
+
+		public string Cell23
+		{
+			get { return _cell23; }
+			set
+			{
+				if (_cell23 != value)
+				{
+					_cell23 = value;
+					OnPropertyChanged(nameof(Cell23));
+				}
+			}
+		}
+
+		private string _cell30;
+
+		public string Cell30
+		{
+			get { return _cell30; }
+			set
+			{
+				if (_cell30 != value)
+				{
+					_cell30 = value;
+					OnPropertyChanged(nameof(Cell30));
+				}
+			}
+		}
+
+		private string _cell31;
+
+		public string Cell31
+		{
+			get { return _cell31; }
+			set
+			{
+				if (_cell31 != value)
+				{
+					_cell31 = value;
+					OnPropertyChanged(nameof(Cell31));
+				}
+			}
+		}
+
+		private string _cell32;
+
+		public string Cell32
+		{
+			get { return _cell32; }
+			set
+			{
+				if (_cell32 != value)
+				{
+					_cell32 = value;
+					OnPropertyChanged(nameof(Cell32));
+				}
+			}
+		}
+
+		private string _cell33;
+
+		public string Cell33
+		{
+			get { return _cell33; }
+			set
+			{
+				if (_cell33 != value)
+				{
+					_cell33 = value;
+					OnPropertyChanged(nameof(Cell33));
 				}
 			}
 		}
