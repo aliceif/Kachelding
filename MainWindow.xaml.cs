@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Drawing;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,9 +23,13 @@ namespace Kachelding
 			this.DataContext = this;
 			this.PixelSize = 16;
 			this.Cell00 = "A";
-			this.Cell01 = "A";
-			this.Cell02 = "A";
-			this.Cell03 = "A";
+			this.Cell01 = "B";
+			this.Cell02 = "C";
+			this.Cell03 = "D";
+			this.ColorA = "Black";
+			this.ColorB = "Red";
+			this.ColorC = "Green";
+			this.ColorD = "Blue";
 		}
 
 

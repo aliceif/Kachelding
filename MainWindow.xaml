@@ -17,35 +17,83 @@
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
-			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="250"/>
 		</Grid.ColumnDefinitions>
 		<Rectangle Grid.Row="0" Grid.RowSpan="1" Grid.Column="0">
 			<Rectangle.Fill>
 				<DrawingBrush TileMode="Tile" ViewportUnits="Absolute" Stretch="Uniform" Viewport="{Binding PixelSize, Converter={StaticResource PixelsizeToRectConverter}}">
 					<DrawingBrush.Drawing>
 						<DrawingGroup>
-							<GeometryDrawing Brush="{Binding Cell00, Converter={StaticResource LetterToColorConverter}}">
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell00"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
 								<GeometryDrawing.Geometry>
 									<GeometryGroup>
 										<RectangleGeometry Rect="0,0,10,10"/>
 									</GeometryGroup>
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
-							<GeometryDrawing Brush="{Binding Cell01, Converter={StaticResource LetterToColorConverter}}">
-								<GeometryDrawing.Geometry>
-									<GeometryGroup>
-										<RectangleGeometry Rect="0,10,10,10"/>
-									</GeometryGroup>
-								</GeometryDrawing.Geometry>
-							</GeometryDrawing>
-							<GeometryDrawing Brush="{Binding Cell02, Converter={StaticResource LetterToColorConverter}}">
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell01"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
 								<GeometryDrawing.Geometry>
 									<GeometryGroup>
 										<RectangleGeometry Rect="10,0,10,10"/>
 									</GeometryGroup>
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
-							<GeometryDrawing Brush="{Binding Cell03, Converter={StaticResource LetterToColorConverter}}">
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell02"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry Rect="0,10,10,10"/>
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+							<GeometryDrawing>
+								<GeometryDrawing.Brush>
+									<MultiBinding>
+										<MultiBinding.Converter>
+											<local:LetterToColorMultiConverter/>
+										</MultiBinding.Converter>
+										<Binding Path="Cell03"/>
+										<Binding Path="ColorA"/>
+										<Binding Path="ColorB"/>
+										<Binding Path="ColorC"/>
+										<Binding Path="ColorD"/>
+									</MultiBinding>
+								</GeometryDrawing.Brush>
 								<GeometryDrawing.Geometry>
 									<GeometryGroup>
 										<RectangleGeometry Rect="10,10,10,10"/>
