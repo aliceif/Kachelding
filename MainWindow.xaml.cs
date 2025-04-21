@@ -22,7 +22,7 @@ namespace Kachelding
 		{
 			InitializeComponent();
 			this.DataContext = this;
-			this.PixelSize = 100;
+			this.PixelSize = 160;
 			this.Cell00 = "A";
 			this.Cell01 = "B";
 			this.Cell02 = "C";
@@ -39,10 +39,18 @@ namespace Kachelding
 			this.Cell31 = "A";
 			this.Cell32 = "C";
 			this.Cell33 = "D";
-			this.ColorA = "Black";
-			this.ColorB = "Red";
-			this.ColorC = "Green";
-			this.ColorD = "Blue";
+			this.ColorA = "Red";
+			this.ColorB = "Green";
+			this.ColorC = "Blue";
+			this.ColorD = "Black";
+			this.TileOrientation00 = "N";
+			this.TileOrientation01 = "N";
+			this.TileOrientation10 = "N";
+			this.TileOrientation11 = "N";
+			this.ColorWiring00 = "ABCD";
+			this.ColorWiring01 = "ABCD";
+			this.ColorWiring10 = "ABCD";
+			this.ColorWiring11 = "ABCD";
 		}
 
 		public String CustomTitle { get => $"Kachelding {Assembly.GetExecutingAssembly().GetName().Version}"; }
@@ -304,6 +312,132 @@ namespace Kachelding
 		}
 
 		#endregion "Cell NPs"
+
+		#region "TileOrientation NPs"
+		private string _tileOrientation00;
+
+		public string TileOrientation00
+		{
+			get { return _tileOrientation00; }
+			set
+			{
+				if (_tileOrientation00 != value)
+				{
+					_tileOrientation00 = value;
+					OnPropertyChanged(nameof(TileOrientation00));
+				}
+			}
+		}
+
+		private string _tileOrientation01;
+
+		public string TileOrientation01
+		{
+			get { return _tileOrientation01; }
+			set
+			{
+				if (_tileOrientation01 != value)
+				{
+					_tileOrientation01 = value;
+					OnPropertyChanged(nameof(TileOrientation01));
+				}
+			}
+		}
+
+		private string _tileOrientation10;
+
+		public string TileOrientation10
+		{
+			get { return _tileOrientation10; }
+			set
+			{
+				if (_tileOrientation10 != value)
+				{
+					_tileOrientation10 = value;
+					OnPropertyChanged(nameof(TileOrientation10));
+				}
+			}
+		}
+
+		private string _tileOrientation11;
+
+		public string TileOrientation11
+		{
+			get { return _tileOrientation11; }
+			set
+			{
+				if (_tileOrientation11 != value)
+				{
+					_tileOrientation11 = value;
+					OnPropertyChanged(nameof(TileOrientation11));
+				}
+			}
+		}
+
+		#endregion "TileOrientation NPs"
+
+		#region "ColorWiring NPs"
+		private string _colorWiring00;
+
+		public string ColorWiring00
+		{
+			get { return _colorWiring00; }
+			set
+			{
+				if (_colorWiring00 != value)
+				{
+					_colorWiring00 = value;
+					OnPropertyChanged(nameof(ColorWiring00));
+				}
+			}
+		}
+
+		private string _colorWiring01;
+
+		public string ColorWiring01
+		{
+			get { return _colorWiring01; }
+			set
+			{
+				if (_colorWiring01 != value)
+				{
+					_colorWiring01 = value;
+					OnPropertyChanged(nameof(ColorWiring01));
+				}
+			}
+		}
+
+		private string _colorWiring10;
+
+		public string ColorWiring10
+		{
+			get { return _colorWiring10; }
+			set
+			{
+				if (_colorWiring10 != value)
+				{
+					_colorWiring10 = value;
+					OnPropertyChanged(nameof(ColorWiring10));
+				}
+			}
+		}
+
+		private string _colorWiring11;
+
+		public string ColorWiring11
+		{
+			get { return _colorWiring11; }
+			set
+			{
+				if (_colorWiring11 != value)
+				{
+					_colorWiring11 = value;
+					OnPropertyChanged(nameof(ColorWiring11));
+				}
+			}
+		}
+
+		#endregion "ColorWiring NPs"
 
 		#region "Color NPs"
 
