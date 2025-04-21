@@ -1410,7 +1410,7 @@
 				<TextBox Width="50" Text="{Binding PixelSize}" DockPanel.Dock="Right"/>
 				<Slider Margin="2" SmallChange="8" LargeChange="40" TickFrequency="8" IsSnapToTickEnabled="True" Value="{Binding PixelSize}" Minimum="8" Maximum="400"/>
 			</DockPanel>
-			<Grid HorizontalAlignment="Right" VerticalAlignment="Top">
+			<Grid>
 				<Grid.Resources>
 					<Style TargetType="{x:Type TextBox}">
 						<Setter Property="Width" Value="50"/>
@@ -1419,6 +1419,7 @@
 					</Style>
 				</Grid.Resources>
 				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="*"/>
 					<RowDefinition Height="*"/>
 					<RowDefinition Height="*"/>
@@ -1426,26 +1427,28 @@
 				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
 				</Grid.ColumnDefinitions>
-				<TextBox Grid.Row="0" Grid.Column="0" Text="{Binding Cell00}" />
-				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Cell01}" />
-				<TextBox Grid.Row="0" Grid.Column="2" Text="{Binding Cell02}" />
-				<TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Cell03}" />
-				<TextBox Grid.Row="1" Grid.Column="0" Text="{Binding Cell10}" />
-				<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Cell11}" />
-				<TextBox Grid.Row="1" Grid.Column="2" Text="{Binding Cell12}" />
-				<TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Cell13}" />
-				<TextBox Grid.Row="2" Grid.Column="0" Text="{Binding Cell20}" />
-				<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Cell21}" />
-				<TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Cell22}" />
-				<TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Cell23}" />
-				<TextBox Grid.Row="3" Grid.Column="0" Text="{Binding Cell30}" />
-				<TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Cell31}" />
-				<TextBox Grid.Row="3" Grid.Column="2" Text="{Binding Cell32}" />
-				<TextBox Grid.Row="3" Grid.Column="3" Text="{Binding Cell33}" />
+				<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5">Tile Coloring</TextBlock>
+				<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Cell00}" />
+				<TextBox Grid.Row="1" Grid.Column="2" Text="{Binding Cell01}" />
+				<TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Cell02}" />
+				<TextBox Grid.Row="1" Grid.Column="4" Text="{Binding Cell03}" />
+				<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Cell10}" />
+				<TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Cell11}" />
+				<TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Cell12}" />
+				<TextBox Grid.Row="2" Grid.Column="4" Text="{Binding Cell13}" />
+				<TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Cell20}" />
+				<TextBox Grid.Row="3" Grid.Column="2" Text="{Binding Cell21}" />
+				<TextBox Grid.Row="3" Grid.Column="3" Text="{Binding Cell22}" />
+				<TextBox Grid.Row="3" Grid.Column="4" Text="{Binding Cell23}" />
+				<TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Cell30}" />
+				<TextBox Grid.Row="4" Grid.Column="2" Text="{Binding Cell31}" />
+				<TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Cell32}" />
+				<TextBox Grid.Row="4" Grid.Column="4" Text="{Binding Cell33}" />
 			</Grid>
 			<Grid>
 				<Grid.ColumnDefinitions>
@@ -1491,7 +1494,7 @@
 					<ColumnDefinition Width="Auto"/>
 					<ColumnDefinition Width="Auto"/>
 				</Grid.ColumnDefinitions>
-				<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">Tile Orientation</TextBlock>
+				<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">Tile Group Orientation</TextBlock>
 				<TextBlock Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">NESW for rotation no flip<LineBreak/>0369 for rotation with flip</TextBlock>
 				<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding TileOrientation00}" />
 				<TextBox Grid.Row="1" Grid.Column="2" Text="{Binding TileOrientation01}" />
