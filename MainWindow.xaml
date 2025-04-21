@@ -1406,8 +1406,9 @@
 		</Rectangle>
 		<StackPanel Grid.Column="1" Orientation="Vertical" Margin="2">
 			<DockPanel>
-				<TextBlock Text="PixelSize"/>
-				<TextBox Text="{Binding PixelSize}"/>
+				<TextBlock Text="Tile Group Size" DockPanel.Dock="Left"/>
+				<TextBox Width="50" Text="{Binding PixelSize}" DockPanel.Dock="Right"/>
+				<Slider Margin="2" SmallChange="8" LargeChange="40" TickFrequency="8" IsSnapToTickEnabled="True" Value="{Binding PixelSize}" Minimum="8" Maximum="400"/>
 			</DockPanel>
 			<Grid HorizontalAlignment="Right" VerticalAlignment="Top">
 				<Grid.Resources>
