@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Windows;
@@ -51,6 +52,9 @@ namespace Kachelding
 			this.ColorWiring01 = "ABCD";
 			this.ColorWiring10 = "ABCD";
 			this.ColorWiring11 = "ABCD";
+
+			this.ExportWidth = 1920;
+			this.ExportHeight = 1080;
 		}
 
 		public String CustomTitle { get => $"Kachelding {Assembly.GetExecutingAssembly().GetName().Version}"; }
@@ -503,6 +507,40 @@ namespace Kachelding
 
 		#endregion "Color NPs"
 
+		#region "Export NPs"
+
+		private int _exportWidth;
+
+		public int ExportWidth
+		{
+			get { return _exportWidth; }
+			set
+			{
+				if (_exportWidth != value)
+				{
+					_exportWidth = value;
+					OnPropertyChanged(nameof(ExportWidth));
+				}
+			}
+		}
+
+		private int _exportHeight;
+
+		public int ExportHeight
+		{
+			get { return _exportHeight; }
+			set
+			{
+				if (_exportHeight != value)
+				{
+					_exportHeight = value;
+					OnPropertyChanged(nameof(ExportHeight));
+				}
+			}
+		}
+
+		#endregion "Export NPs"
+
 		#region "INP"
 
 		public event PropertyChangedEventHandler? PropertyChanged;
@@ -512,5 +550,44 @@ namespace Kachelding
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 		#endregion "INP"
+
+		private void Export_Click(object sender, RoutedEventArgs e)
+		{
+			var saveFileDialog = new Microsoft.Win32.SaveFileDialog()
+			{
+				// todo prepare filename that contains stringified tiling rule
+				FileName = "Kachel",
+				DefaultExt = ".png",
+				Filter = "Png Image (.png)|*.png;"
+			};
+
+			if (saveFileDialog.ShowDialog() is not true || string.IsNullOrWhiteSpace(saveFileDialog.FileName))
+			{
+				return;
+			}
+
+			var drawingVisual = new DrawingVisual();
+
+			using (var drawingContext = drawingVisual.RenderOpen())
+			{
+				drawingContext.DrawRectangle(this.RenderBrush00, null, new Rect(0, 0, this.ExportWidth, this.ExportHeight));
+				drawingContext.DrawRectangle(this.RenderBrush01, null, new Rect(0, 0, this.ExportWidth, this.ExportHeight));
+				drawingContext.DrawRectangle(this.RenderBrush10, null, new Rect(0, 0, this.ExportWidth, this.ExportHeight));
+				drawingContext.DrawRectangle(this.RenderBrush11, null, new Rect(0, 0, this.ExportWidth, this.ExportHeight));
+			}
+
+			var renderTargetBitmap = new RenderTargetBitmap(this.ExportWidth, this.ExportHeight, 96, 96, PixelFormats.Pbgra32);
+			renderTargetBitmap.Render(drawingVisual);
+
+			// save to file
+			var pngBitmapEncoder = new PngBitmapEncoder();
+
+			pngBitmapEncoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+
+			using (var stream = File.Create(saveFileDialog.FileName))
+			{
+				pngBitmapEncoder.Save(stream);
+			}
+		}
 	}
 }
